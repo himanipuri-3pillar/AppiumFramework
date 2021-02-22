@@ -27,7 +27,7 @@ public class Preferences {
 	@AndroidFindBy(xpath = "//android.widget.LinearLayout[2]/android.widget.RelativeLayout")
 	public WebElement relativelayout;
 	
-	@AndroidFindBy(className = "\"android.widget.EditText")
+	@AndroidFindBy(className = "android.widget.EditText")
 	public WebElement entertext;
 	
 	@AndroidFindBy(id = "android:id/button1")

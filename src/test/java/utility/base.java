@@ -1,4 +1,4 @@
-package practice.AppiumFramework;
+package utility;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -60,9 +60,7 @@ public class base {
 		try {
 			Process process = new ProcessBuilder(aCommand).start();
 			process.waitFor(180, TimeUnit.SECONDS);
-			System.out.println("Emulator launched successfully!");
 		} catch (Exception e) {
-			System.out.println("HEY Buddy ! U r Doing Something Wrong ");
 			e.printStackTrace();
 		}
 	}
@@ -70,10 +68,10 @@ public class base {
 	public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException, InterruptedException {
 
 		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "\\src\\main\\java\\practice\\AppiumFramework\\global.properties");
+				System.getProperty("user.dir") + "\\src\\test\\java\\resources\\global.properties");
 		Properties prop = new Properties();
 		prop.load(fis);
-		File f = new File("src/main/java");
+		File f = new File("src/test/java");
 		File fs = new File(f, (String) prop.get(appName));
 		String device = (String) prop.get("device");
 		System.out.print(device);
