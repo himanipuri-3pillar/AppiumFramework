@@ -5,6 +5,7 @@
     <classes>
       <class name="practice.AppiumFramework.DemoTest">
         <methods>
+          <include name="swipeTest"/>
           <include name="simpleClick"/>
         </methods>
       </class> <!-- practice.AppiumFramework.DemoTest -->

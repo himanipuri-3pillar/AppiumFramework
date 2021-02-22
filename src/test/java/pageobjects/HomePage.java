@@ -16,19 +16,21 @@ public class HomePage {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
 	}
+	
+	/* This class contain webelements of homepage only ,
+	 * the baseokclick is the element 
+	 * which require manual click to proceed 
+	 * as this pop up appears due to mobile configuration
+	 * */
+	
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='OK']")
+	public WebElement baseokclick;
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Preference']")
 	public WebElement Preferences;
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Views']")
 	public WebElement Views;
-
-	public WebElement getViews() {
-		System.out.println("Click on Views");
-		return Views;
-	}
 	
-	@AndroidFindBy(xpath = "//android.widget.Button[@text='OK']")
-	public WebElement baseokclick;
-
+	
 }
